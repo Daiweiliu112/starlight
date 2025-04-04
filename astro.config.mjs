@@ -14,7 +14,6 @@ export default defineConfig({
 				{
 					label: 'Guides',
 					items: [
-						// Each item here is one entry in the navigation menu.
 						{ label: 'Example Guide', slug: 'guides/example' },
 					],
 				},
@@ -23,6 +22,13 @@ export default defineConfig({
 					autogenerate: { directory: 'reference' },
 				},
 			],
+			// Add the i18n settings here
+			i18n: {
+				routing: {
+					prefixDefaultLocale: true, // Ensure this is set
+					redirectToDefaultLocale: true, // Only valid if prefixDefaultLocale is true
+				},
+			},
 		}),
 	],
 });
